@@ -1,3 +1,4 @@
+'use strict';
 let num = 1;
 num += 12;
 num -= 14;
