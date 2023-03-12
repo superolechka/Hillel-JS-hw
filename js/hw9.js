@@ -1,46 +1,21 @@
 'use strict';
 
-let operand1;
-let operand2;
+const operand1 = Number(prompt("Введіть перше число"));
+const operand2 = Number(prompt("Введіть друге число"));
+
 function isEqual(operand1, operand2) {
-    operand1 === operand2 ? console.log('true') : console.log('false')
+    return operand1 === operand2;
 };
+console.log(isEqual(operand1, operand2));
 
 function isSumMore(operand1, operand2) {
-    operand1 + operand2 > 10 ? console.log('true') : console.log('false')
+   return operand1 + operand2 > 10 ? true : false
 };
+console.log(isSumMore(operand1, operand2));
 
-let someNumber;
-function isNegativeNumber(someNumber) {
-    someNumber < 0 ? console.log('true') : console.log('false')
+function isNegativeNumber(operand1) {
+   return operand1 < 0 
 }
+console.log(isNegativeNumber(operand1))
 
-// Інший варіант
-
-let number1;
-let number2;
-function isEqualNum(number1, number2) {
-    if (number1 === number2) {
-        alert('true') 
-    } else {
-        alert('false')
-    }    
-};
-
-function isSumMore(number1, number2) {
-    if (number1 + number2 > 10) {
-        alert('true') 
-    } else {
-        alert('false')
-    } 
-};
-
-let anyNumber;
-function isNegativeNum(anyNumber) {
-    if (anyNumber < 0) {
-        alert('true') 
-    } else {
-        alert('false')
-    } 
-}
 
