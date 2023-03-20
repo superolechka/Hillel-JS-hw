@@ -7,8 +7,8 @@ while (num === null || !num.trim() || isNaN(+num)) {
 
 function isSimpl(num) {
     let n = 0;
-    for (let i = 1; i <= num; i++) {
-        if (num % i === 0) n += 1;
+    for (let i = 1; i <= Number(num); i++) {
+        if (Number(num) % i === 0) n += 1;
     }
     return n === 2 ? true : false;
 }
