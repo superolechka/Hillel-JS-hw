@@ -4,16 +4,11 @@ const arr = [1, 2, 3, -1, -2, -3];
 
 function getPositiveArray(arr) {
     const positiveArr = [];
+    if (!Array.isArray(arr)) return;
     if (arr.length === 0) console.log('Введений масив - порожній');
     for (let i = 0; i < arr.length; i++) {
-        if (Number(arr[i]) > 0 ) {  
-           positiveArr.push(arr[i]);
-        }
+        if (arr[i] > 0 ) positiveArr.push(arr[i]);    
     }
-    if (positiveArr.length > 0) {
-        return positiveArr;
-    } else {
-        return null
-    }
-}
+    return positiveArr.length > 0 ? positiveArr : null;
+}        
 console.log(getPositiveArray(arr));
