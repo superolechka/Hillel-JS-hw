@@ -6,15 +6,10 @@ while (num === null || !num.trim() || isNaN(+num)) {
 };
 
 function minDivisor(num) {
-    if (Number(num) < 1) {
-        return 'NaN';
-    } else {
-        for (let i = 2; i < Number(num); i++) {
-            if (Number(num) % i === 0) {
-                return i;
-            };
-        }
-        return `${num} - просте число`
+    if (Number(num) < 1) return 'NaN';
+    for (let i = 2; i < Number(num); i++) {
+        if (Number(num) % i === 0) return i;
     }
+    return `${num} - просте число`
 }
 console.log(minDivisor(num))
