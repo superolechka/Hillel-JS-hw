@@ -5,7 +5,7 @@ const arr = [1, 2, 3, -1, -2, -3];
 function getPositiveArray(arr) {
     const positiveArr = [];
     if (!Array.isArray(arr)) return;
-    if (arr.length === 0) console.log('Введений масив - порожній');
+    if (arr.length === 0) return 'Введений масив - порожній';
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > 0 ) positiveArr.push(arr[i]);    
     }
