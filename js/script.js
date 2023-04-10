@@ -2,19 +2,17 @@
 
 // #1
 const arr = ['a', 'b', 'c', 'd'];
-document.write(`'${arr[0]}+${arr[1]}, ${arr[2]}+ ${arr[3]}'`);
-document.write('<br>');
+console.log(`'${arr[0]}+${arr[1]}, ${arr[2]}+ ${arr[3]}'`);
+
 
 // #2
 const myArr = [2, 5, 3, 9];
 const result = myArr[0] * myArr[1] + myArr[2] * myArr[3];
-document.write(result);
-document.write('<br>');
+console.log(result);
 
 // #3
 const myArray3 = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
-document.write(myArray3[1][0]);
-document.write('<br>');
+console.log(myArray3[1][0]);
 
 // #4
 const our = {
@@ -22,8 +20,7 @@ const our = {
     php: 'hello', 
     css: 'world'
 }
-document.write(our.js[0]);
-document.write('<br>');
+console.log(our.js[0]);
 
 // #5
 const newArray = [];
@@ -33,8 +30,7 @@ for (let i=0; i < length; i += 1) {
     newArray.push(elem);
     elem += 'x';
 }
-document.write(newArray);
-document.write('<br>');
+console.log(newArray);
 
 // #6
 const arrNum = [];
@@ -46,8 +42,7 @@ for (let i = 1; i <= n; i += 1) {
     }
     arrNum.push(el)    
 }
-document.write(arrNum);
-document.write('<br>');
+console.log(arrNum);
 
 // #7
 const arrayFill = (element, count) => { 
@@ -57,8 +52,7 @@ const arrayFill = (element, count) => {
     }
     return ourArray
 }
-document.write(arrayFill('x', 5));
-document.write('<br>');
+console.log(arrayFill('x', 5));
 
 // #8
 const arrayOfNumber = [7, 1, 3, 8, 5];
@@ -69,8 +63,7 @@ const countSum = (arr8) => {
     if (sum > 10 ) return i+1;
     }
 }
-document.write(countSum(arrayOfNumber));
-document.write('<br>');
+console.log(countSum(arrayOfNumber));
 
 // #9
 const arrOfNumber = [1, 2, 3, 4, 5];
@@ -78,8 +71,7 @@ const reversArr = [];
 for (let i = arrOfNumber.length-1; i >= 0; i -= 1) {
     reversArr.push(arrOfNumber[i])
 }
-document.write(reversArr);
-document.write('<br>');
+console.log(reversArr);
 
 // #10
 const arr10 = [[1, 2, 3], [4, 5], [6]];
@@ -89,8 +81,7 @@ for (let i = 0; i < arr10.length; i += 1) {
         sum += arr10[i][j];
     }
 }
-document.write(sum);
-document.write('<br>');
+console.log(sum);
 
 // #11
 const arr11 =  [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
@@ -102,5 +93,4 @@ for (let i = 0; i < arr11.length; i += 1) {
         }        
     }
 }
-document.write(add);
-document.write('<br>');
+console.log(add);
