@@ -3,6 +3,9 @@
 void function () {
 
     const calculator = {
+        num1: null,
+        num2: null,
+
         read() {
             this.num1 = Number(prompt('Введіть перше число'));
             this.num2 = Number(prompt('Введіть друге число'));
