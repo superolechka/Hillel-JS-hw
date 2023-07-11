@@ -1,0 +1,34 @@
+ГАМБУРГЕР
+Мережа фастфудів пропонує кілька видів гамбургерів:
+маленький (50 тугриків, 20 калорій);
+великий (100 тугриків, 40 калорій).
+
+Гамбургер може бути з одним із декількох видів начинок:
+сиром (+ 10 тугриків, + 20 калорій);
+салатом (+ 20 тугриків, + 5 калорій);
+картоплею (+ 15 тугриків, + 10 калорій).
+
+Можна додати добавки:
+посипати приправою (+15 тугриків, 0 калорій) - полити майонезом (+ 20 тугриків, +5 калорій).
+
+Напишіть програму, яка розраховує вартість та калорійність гамбургера. Використовуйте ООП підхід.
+(підказка: потрібен клас Гамбургер, константи, методи для вибору опцій та розрахунку потрібних величин)
+
+Приклад роботи коду:
+// Small hamburger with cheese filling
+const hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
+
+// Add mayonnaise topping
+hamburger.addTopping(Hamburger.TOPPING_MAYO);
+
+// Check the number of calories
+console.log(Calories: ${hamburger.calculate()});
+
+// Check the price
+console.log(Price: ${hamburger.calculatePrice()});
+
+// I changed my mind and decided to add sauce
+hamburger.addTopping(Hamburger.TOPPING_SAUCE);
+
+// What is the price now?
+console.log(Price with sauce: ${hamburger.calculatePrice()});
