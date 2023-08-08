@@ -20,9 +20,18 @@ const Model = {
     deleteData(id) {
         const savedData = this.getData();
         const index = savedData.findIndex(item => item.id === id);
-        const removedEl = savedData.splice(index, 1);
-        localStorage.setItem(this.dataKey, JSON.stringify(savedData));
-        return removedEl[0];
+
+        if (index !== -1) {
+            const removedEl = savedData.splice(index, 1);
+            localStorage.setItem(this.dataKey, JSON.stringify(savedData));
+
+            if (id === this.currentId - 1) {
+                this.currentId -= 1;
+            }
+
+            return removedEl[0];
+        }
+
     },
 
     // will save data to storage
