@@ -88,23 +88,28 @@ class PhoneBook {
         });
     }
 
+    setupSearchEventListeners() {
+        const searchButton = document.querySelector('[for="contacts-search"]');
+        const searchInput = document.getElementById('contacts-search');
+
+        searchButton.addEventListener('click', () => this.search());
+        
+        searchInput.addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                this.search();
+            }
+        });
+    }
+
     #setEvents() {
         Call.addSubscription(Call.EVENT_TYPES.changeStatus, this.#trackCallStatus);
         Call.addSubscription(Call.EVENT_TYPES.changeDuration, this.#trackCallDuration);
-
-        const searchButton = document.querySelector('[for="contacts-search"]');
-        const searchInput = document.getElementById('contacts-search');
 
         this.list.addEventListener('click', this.#removeHandler);
         this.list.addEventListener('click', this.#callHandler);
         this.#modal._element.querySelector(`[${this.#ATTRS.dataEndCallBtn}]`).addEventListener('click', this.#endCall);
 
-        searchButton.addEventListener('click', () => this.search());
-        searchInput.addEventListener('keyup', (e) => {
-            if (e.key === 'Enter') {
-                this.search();
-            }
-        });
+        this.setupSearchEventListeners();
     }
 
     // your methods
