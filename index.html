@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home work </title>
+    <title>home work 75</title>
 </head>
 <body>
+    <label for="postId">Enter Post ID (1-100):</label>
+    <input type="number" id="postId" min="1" max="100">
+    <button id="searchButton">Search</button>
+
+    <div id="postContainer" style="display: none;">
+        <h2>Post Details</h2>
+        <div id="post"></div>
+        <button id="commentsButton">Get Comments</button>
+        <div id="comments"></div>
+    </div>
+
     <script src="./js/script.js"></script>
 </body>
 </html>
