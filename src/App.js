@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import DefinitionsList from './Definitions';
 
-function App() {
+const App = () => {
+  const definitions = [
+    { dt: 'one', dd: 'two', id: 1 },
+    { dt: 'another term', dd: 'another description', id: 2 },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Definitions List</h1>
+      <DefinitionsList data={definitions} />
     </div>
   );
-}
+};
 
 export default App;
+
